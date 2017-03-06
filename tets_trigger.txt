@@ -1,1 +1,0 @@
-Just test trigger in jenkins job builder
