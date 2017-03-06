@@ -1,0 +1,17 @@
+- job:
+    name: get_code_job
+    project-type: freestyle
+    description: 'Test yaml - get yaml from github and make some changes'
+    triggers:
+      - github
+    scm:
+      - git:
+          url: "https://github.com/mbliznikova/many-faced.git"
+          branches:
+            - master
+          basedir: for_scm_test
+    builders:
+      - shell: 
+          cd /vagrant
+          jenkins-jobs --conf /vagrant/jenkins_jobs.ini update /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml
+          echo "Test yaml was applied, here we go!"
