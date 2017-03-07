@@ -1,5 +1,5 @@
 - job:
-    name: NEW_TEST_PROJECT
+    name: NEW_TEST_PROJECT1
     project-type: freestyle
     description: 'Get yaml from github and change the workspace'
     triggers:
