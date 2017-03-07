@@ -1,5 +1,5 @@
 - job:
-    name: get_code_job_new
+    name: new_project
     project-type: freestyle
     description: 'NEW Test yaml - get yaml from github and make some changes'
     triggers:
@@ -13,7 +13,5 @@
     builders:
       - shell: 
           cd /vagrant
-      - shell:
           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml
-      - shell:
           echo "WHATS'UP?"
