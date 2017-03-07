@@ -1,5 +1,5 @@
 - job:
-    name: get_code_job
+    name: get_code_job_new
     project-type: freestyle
     description: 'NEW Test yaml - get yaml from github and make some changes'
     triggers:
