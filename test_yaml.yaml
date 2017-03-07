@@ -1,5 +1,5 @@
 - job:
-    name: new_test_project
+    name: new_test_project_new
     project-type: freestyle
     description: 'NEW Test yaml - get yaml from github and change the workspace'
     triggers:
@@ -9,10 +9,9 @@
           url: "https://github.com/mbliznikova/many-faced.git"
           branches:
             - master
-          basedir: for_scm_test
     builders:
       - shell: 
-          cp /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml /vagrant
+          cp /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml /vagrant/test_yaml.yaml
           cd /vagrant
           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update ./test_yaml.yaml
           echo "WHATS'UP?"
