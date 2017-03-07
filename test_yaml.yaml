@@ -1,7 +1,7 @@
 - job:
-    name: new_project
+    name: new_test_project
     project-type: freestyle
-    description: 'NEW Test yaml - get yaml from github and make some changes'
+    description: 'NEW Test yaml - get yaml from github and change the workspace'
     triggers:
       - github
     scm:
