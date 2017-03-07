@@ -9,7 +9,7 @@
           url: "https://github.com/mbliznikova/many-faced.git"
           branches:
             - master
-          basedir: test
+          basedir: for_scm_test
     builders:
       - shell: 
-          echo "WHATS'UP?"
+           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml
