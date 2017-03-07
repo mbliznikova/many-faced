@@ -12,6 +12,7 @@
           basedir: for_scm_test
     builders:
       - shell: 
+          cp /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml /vagrant
           cd /vagrant
-          jenkins-jobs --conf /vagrant/jenkins_jobs.ini update /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml
+          jenkins-jobs --conf /vagrant/jenkins_jobs.ini update ./test_yaml.yaml
           echo "WHATS'UP?"
