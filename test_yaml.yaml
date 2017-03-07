@@ -13,5 +13,7 @@
     builders:
       - shell: 
           cd /vagrant
+      - shell:
           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml
+      - shell:
           echo "WHATS'UP?"
