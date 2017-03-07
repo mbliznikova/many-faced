@@ -12,6 +12,5 @@
     builders:
       - shell: 
           cp /var/lib/jenkins/workspace/get_code_job/for_scm_test/test_yaml.yaml /vagrant/test_yaml.yaml
-          cd /vagrant
           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update ./test_yaml.yaml
           echo "WHATS'UP?"
