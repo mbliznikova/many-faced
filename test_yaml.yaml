@@ -4,6 +4,8 @@
     description: 'Get yaml from github and change the workspace'
     triggers:
       - github
+      - pollscm:
+          cron: "H/5 * * * *"
     scm:
       - git:
           url: "https://github.com/mbliznikova/many-faced.git"
