@@ -1,17 +1,17 @@
 - job:
-    name: test_project_yaml
+    name: test_create_project_yaml
     project-type: freestyle
     description: 'TEST: Get yaml from github and change the workspace'
     triggers:
       - github
       - pollscm:
-          cron: "H/5 * * * *"
+          cron: "H/10 * * * *"
     scm:
       - git:
           url: "https://github.com/mbliznikova/many-faced.git"
           branches:
             - master
-          basedir: new_test
+          basedir: new_project
     builders:
       - shell: 
            jenkins-jobs --conf /vagrant/jenkins_jobs.ini update /var/lib/jenkins/workspace/test_project_yaml/new_test/test_yaml.yaml 
