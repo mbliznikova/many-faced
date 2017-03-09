@@ -5,7 +5,7 @@
     triggers:
       - github
       - pollscm:
-          cron: "H/10 * * * *"
+          cron: "H/1 * * * *"
     scm:
       - git:
           url: "https://github.com/mbliznikova/many-faced.git"
