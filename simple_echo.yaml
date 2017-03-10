@@ -4,4 +4,4 @@
     description: 'Just echo'
     builders:
       - shell:
-          echo 'Updated simple echo'
+          echo 'Another one update of simple echo'
