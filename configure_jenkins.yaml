@@ -1,0 +1,17 @@
+- job:
+    name: configure_jenkins
+    project-type: freestyle
+    description: 'Get yaml from github and change the Jenkins'
+    triggers:
+      - github
+      - pollscm:
+          cron: "H/1 * * * *"
+    scm:
+      - git:
+          url: "https://github.com/mbliznikova/many-faced.git"
+          branches:
+            - master
+          basedir: configure_jenkins
+    builders:
+      - shell:
+           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update $WORKSPACE/configure_jenkins/configure_jenkins.yaml
