@@ -1,0 +1,7 @@
+- job:
+    name: simple_echo_job
+    project-type: freestyle
+    description: 'Just echo'
+    builders:
+      - shell:
+          echo 'Simple echo'
