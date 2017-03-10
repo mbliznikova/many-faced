@@ -1,7 +1,7 @@
 - job:
     name: configure_jenkins
     project-type: freestyle
-    description: 'Get yaml from github and change the Jenkins'
+    description: 'Get yamls from github and change the Jenkins'
     triggers:
       - github
       - pollscm:
