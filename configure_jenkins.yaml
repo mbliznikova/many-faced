@@ -14,4 +14,4 @@
           basedir: configure_jenkins
     builders:
       - shell:
-           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update $WORKSPACE/configure_jenkins/configure_jenkins.yaml
+           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update $WORKSPACE/configure_jenkins/
