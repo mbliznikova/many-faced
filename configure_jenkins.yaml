@@ -1,7 +1,6 @@
 - job:
     name: configure_jenkins
-    project-type: freestyle
-    description: 'Get yamls from github and change the Jenkins'
+    description: 'Get updates from github and change the Jenkins'
     triggers:
       - github
       - pollscm:
@@ -14,4 +13,4 @@
           basedir: configure_jenkins
     builders:
       - shell:
-           jenkins-jobs --conf /vagrant/jenkins_jobs.ini update $WORKSPACE/configure_jenkins/
+           jenkins-jobs --conf /<path-to-.ini-file>/jenkins_jobs.ini update $WORKSPACE/configure_jenkins/

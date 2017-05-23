@@ -1,0 +1,72 @@
+- defaults:
+    name: global
+    app: https://your-application-address
+    test_dir: /path-to-directory-with-your-tests/
+    grid: http://127.0.0.1:4444/wd/hub
+    title: common_tests
+
+- builder:
+    name: new_tests
+    builders:
+      - shell: |
+          export APP_ADDRESS={app_address}
+          export TEST_DIR={new_test_dir}
+          export HUB_ADDRESS={grid_address}
+          export TEST_BROWSER={bro}
+          export TEST_PLATFORM={os}
+          nosetests $TEST_DIR -v
+
+- builder:
+    name: tests_from_repo
+    builders:
+      - shell: |
+          export APP_ADDRESS={app_address}
+          export TEST_REPO={repo}
+          export HUB_ADDRESS={grid_address}
+          export TEST_BROWSER={bro}
+          export TEST_PLATFORM={os}
+          cd $WORKSPACE/tests_from_repo
+          nosetests -v
+
+- project:
+    name: many-faced
+    jobs:
+        - 'new_tests-{platform}-{browser}-{title}':
+            platform: LINUX
+            browser: firefox
+        - 'new_tests-{platform}-{browser}-{title}':
+            platform: LINUX
+            browser: chrome
+        - 'tests_from_repo-{platform}-{browser}-{title}':
+            platform: LINUX
+            browser: chrome
+            test_repo: https://github.com/someaccount/tests
+            title: tests_from_repository
+
+- job-template:
+    name: 'new_tests-{platform}-{browser}-{title}'
+    builders:
+      - new_tests:
+         app_address: "{app}"
+         new_test_dir: "{test_dir}"
+         grid_address: "{grid}"
+         bro: "{browser}"
+         os: "{platform}"
+
+- job-template:
+    name: 'tests_from_repo-{platform}-{browser}-{title}'
+    triggers:
+      - github
+    scm:
+      - git:
+          url: "{test_repo}"
+          branches:
+            - master
+          basedir: tests_from_repo
+    builders:
+      - tests_from_repo:
+         app_address: "{app}"
+         repo: "{test_repo}"
+         grid_address: "{grid}"
+         bro: "{browser}"
+         os: "{platform}"
