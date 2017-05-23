@@ -1,7 +1,0 @@
-- job:
-    name: simple_echo_job
-    project-type: freestyle
-    description: 'Just echo'
-    builders:
-      - shell:
-          echo 'Another one update of simple echo'
