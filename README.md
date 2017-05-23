@@ -33,7 +33,8 @@ You have deployed web-application and want to run Selenium tests against it and
 2. You want to write Selenium tests for your application and run these tests against application
 3. You have git repository with Selenium tests and you want to add some other tests and run all these tests against application 
 
-First, you need to create jobs in job_templates.yaml. Let's discover the examples for all cases.
+
+__First__, you need to create jobs in job_templates.yaml. Let's discover the examples for all cases.
 
 1. Run tests from git repository against your web application.
    
@@ -55,13 +56,13 @@ So you can specify the addresses in the body of the job in ‘project’ section
    
    1. Create .py file with ’test_’ prefix in one directory with ‘base_setup_teardown' file.
    
-   1. In this new file make import from base_setup_teardown import BaseTestCase.
+   2. In this new file make import from base_setup_teardown import BaseTestCase.
    
-   1. Create your test class, for example class MyTestCase and inherit it from class BaseTestCase.
+   3. Create your test class, for example class MyTestCase and inherit it from class BaseTestCase.
    
-   1. Write your test method and don\t care about setUp() and tearDown(), just use self.driver. 
+   4. Write your test method and don\t care about setUp() and tearDown(), just use self.driver. 
    
-   1. In the end of file put 
+   5. In the end of file put 
    
 ``` 
         if __name__ == '__main__':
@@ -87,9 +88,9 @@ class MyTestCase(BaseTestCase):
 if __name__ == '__main__':
     unittest.main()
 ``` 
-⋅⋅6. Open job_templates.yaml
-⋅⋅7. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
-⋅⋅8. Create there job from 'new_tests-{platform}-{browser}' template:
+   6. Open job_templates.yaml
+   7. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
+   8. Create there job from 'new_tests-{platform}-{browser}' template:
 ```
 - 'new_tests-{platform}-{browser}-{title}':
    platform: LINUX
@@ -100,15 +101,15 @@ if __name__ == '__main__':
 
 3. Write new tests, get tests from git repository and run them all against your web application.
 
-⋅⋅⋅Clone tests from git repository.
+   1. Clone tests from git repository.
 
-⋅⋅⋅Put file ‘base_setup_teardown' in the same directory and create there file(s) with new tests.
+   2. Put file ‘base_setup_teardown' in the same directory and create there file(s) with new tests.
 
-⋅⋅⋅Open job_templates.yaml
+   3. Open job_templates.yaml
 
-⋅⋅⋅Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
+   4. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
 
-⋅⋅⋅Create there job from 'new_tests-{platform}-{browser}' template: 
+   5. Create there job from 'new_tests-{platform}-{browser}' template: 
 ```
 - 'new_tests-{platform}-{browser}-{title}':
    platform: LINUX
@@ -117,8 +118,7 @@ if __name__ == '__main__':
    title: <for example, 'the_third_case'>
 ```   
 
-Second, the common part for the all cases is that you need to create these job(s) in Jenkins.
-
+__Second__, the common part for the all cases is that you need to create these job(s) in Jenkins.
 Here you need to create (or use the existing one) jenkins_jobs.ini file.
 jenkins_jobs.ini should have at least following format:
 ``` 
@@ -131,7 +131,6 @@ When you have the jenkins_jobs.ini file, go to the terminal (if you have Linux) 
 ``` 
     jenkins-jobs --conf /<path_to_jenkins_jobs.ini_file> update  /<path_to_job_templates.yaml>
 ``` 
-
 If job_templates.yaml is correct, you will see something like
 ``` 
 INFO:root:Updating jobs in ['/<path_to_job_templates.yaml>'] ([])
@@ -139,7 +138,6 @@ INFO:jenkins_jobs.builder:Number of jobs generated:  <number of jobs you created
 INFO:jenkins_jobs.builder:Creating jenkins job <name of created job, for example, new_test-LINUX-chrome-the_first_case>
 INFO:jenkins_jobs.builder:Creating jenkins job <name of created job, for example, test-LINUX-firefox-the_third_case>
 ``` 
-
 Go to your Jenkins and check that jobs were created.
 Click the ‘Build now’ button(s) for every job that created in the previous step.
 
