@@ -91,15 +91,10 @@ if __name__ == '__main__':
 ```
 
 3. Write new tests, get tests from git repository and run them all against your web application.
-
 ⋅⋅⋅1. Clone tests from git repository.
-
 ⋅⋅⋅2. Put file ‘base_setup_teardown' in the same directory and create there file(s) with new tests.
-
 ⋅⋅⋅3. Open job_templates.yaml
-
 ⋅⋅⋅4. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
-
 ⋅⋅⋅5. Create there job from 'new_tests-{platform}-{browser}' template: 
 ```
 - 'new_tests-{platform}-{browser}-{title}':
