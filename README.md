@@ -24,7 +24,8 @@ Before you start you should have
 4. Deployed web-application
 5. Selenium tests for application
 
-There are 3 common cases:
+
+__There are 3 common cases__:
 
 You have deployed web-application and want to run Selenium tests against it and 
 1. You have git repository with Selenium tests
