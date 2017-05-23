@@ -2,7 +2,7 @@ Many-faced is a framework for running Selenium tests on different platforms agai
 
 So there is the ability to write and run the new Python Selenium autotests without carrying about setUp and tearDown, you can just inherit the new tests class from BaseTestCase class and use the driver object. 
 
-#### How to use many-faced?
+### How to use many-faced?
 
 The many-faced framework consists of:
 * __File job_templates.yaml__ to create Jenkins jobs with specified parameters. It consists of the following sections:
