@@ -23,3 +23,10 @@ Before you start you should have
 3. Running Selenium Grid with all desired capabilities - OSs and browsers ([how get it and set it up](https://seleniumhq.github.io/docs/grid.html)). So remember that tests should execute on the nodes in headless mode (read http://elementalselenium.com/tips/38-headless , http://stackoverflow.com/questions/6183276/how-do-i-run-selenium-in-xvfb ).  
 4. Deployed web-application
 5. Selenium tests for application
+
+There are 3 common cases:
+
+You have deployed web-application and want to run Selenium tests against it and 
+1. You have git repository with Selenium tests
+2. You want to write Selenium tests for your application and run these tests against application
+3. You have git repository with Selenium tests and you want to add some other tests and run all these tests against application 
