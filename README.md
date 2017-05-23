@@ -14,3 +14,11 @@ The many-faced framework consists of:
     * ‘job-template’ sections: there are templates for jobs. 
 * __File base_setup_teardown.py__ (Python file with BaseTestCase class with setUp and tearDown methods) to inherit from it to write new tests.
 * __File configure_jenkins.yaml__ to update the framework (if something in git repository of framework will change).
+
+##### Prerequisites:
+Before you start you should have 
+1. Jenkins ([how get it and set it up](https://jenkins.io/download/))
+2. Jenkins job builder ([how get it and set it up](https://docs.openstack.org/infra/jenkins-job-builder/))
+3. Running Selenium Grid with all desired capabilities - OSs and browsers ([how get it and set it up](https://seleniumhq.github.io/docs/grid.html)). So remember that tests should execute on the nodes in headless mode (read http://elementalselenium.com/tips/38-headless , http://stackoverflow.com/questions/6183276/how-do-i-run-selenium-in-xvfb ).  
+4. Deployed web-application
+5. Selenium tests for application
