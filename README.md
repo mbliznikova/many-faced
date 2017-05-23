@@ -16,6 +16,7 @@ The many-faced framework consists of:
 * __File configure_jenkins.yaml__ to update the framework (if something in git repository of framework will change).
 
 __Prerequisites__:
+
 Before you start you should have 
 1. Jenkins ([how get it and set it up](https://jenkins.io/download/))
 2. Jenkins job builder ([how get it and set it up](https://docs.openstack.org/infra/jenkins-job-builder/))
