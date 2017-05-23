@@ -151,7 +151,7 @@ Click the ‘Build now’ button(s) for every job that created in the previous s
 
 That’s it!
 
-#### How to work with more that one web application / test repository, etc.
+### How to work with more that one web application / test repository, etc.
 
 If some values (repo or/and application addresses, etc.) repeat in more than one job, you can define it in the ‘defaults’ section. But if you have many jobs with repeated values, but these values should be different (for example, two applications to test on the same platforms, it will be best to define the appropriate values in the each job).  
 
