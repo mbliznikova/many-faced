@@ -20,7 +20,7 @@ __Prerequisites__:
 Before you start you should have 
 1. Jenkins ([how get it and set it up](https://jenkins.io/download/))
 2. Jenkins job builder ([how get it and set it up](https://docs.openstack.org/infra/jenkins-job-builder/))
-3. Running Selenium Grid with all desired capabilities - OSs and browsers ([how get it and set it up](https://seleniumhq.github.io/docs/grid.html)). So remember that tests should execute on the nodes in headless mode (read http://elementalselenium.com/tips/38-headless , http://stackoverflow.com/questions/6183276/how-do-i-run-selenium-in-xvfb ).  
+3. Running Selenium Grid with all desired capabilities - OSs and browsers ([how get it and set it up](https://seleniumhq.github.io/docs/grid.html)). So remember that tests should execute on the nodes in headless mode (read [1]: http://elementalselenium.com/tips/38-headless, [2]: http://stackoverflow.com/questions/6183276/how-do-i-run-selenium-in-xvfb ).  
 4. Deployed web-application
 5. Selenium tests for application
 
