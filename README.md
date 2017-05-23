@@ -36,9 +36,9 @@ You have deployed web-application and want to run Selenium tests against it and
 First, you need to create jobs in job_templates.yaml. Let's discover the examples for all cases.
 
 1. Run tests from git repository against your web application.
-⋅⋅1. Open job_templates.yaml
-⋅⋅2. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
-⋅⋅3. Create there job from 'tests_from_repo-{platform}-{browser}-{title}’ template.
+   i. Open job_templates.yaml
+   ii. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
+   iii. Create there job from 'tests_from_repo-{platform}-{browser}-{title}’ template.
 You can specify the addresses of your app and grid in ‘defaults’ section (see above) for ‘app’ and ‘grid’ parameters respectively. It is useful when you want to create more that one job for the same application and the same grid. So you can define other defaults values in ‘defaults’ section depending on your needs. 
 So you can specify the addresses in the body of the job in ‘project’ section, ‘many-faced’ project, ‘jobs’ section:
 ```
@@ -109,9 +109,9 @@ if __name__ == '__main__':
    title: <for example, 'the_third_case'>
 ```   
 
-Second, Then you need to create these job(s) in Jenkins.
+Second, the common part for the all cases is that you need to create these job(s) in Jenkins.
 
-Here you need to create (or use the existing one) jenkins_jobs.ini file:
+Here you need to create (or use the existing one) jenkins_jobs.ini file.
 jenkins_jobs.ini should have at least following format:
 ``` 
 [jenkins]
@@ -119,8 +119,7 @@ user=<jenkins user with permissions to create jobs>
 password=<password for this user, you can find in in http://jenkins_address/me/configure in Show API Token...>
 url=http://jenkins_address
 ``` 
-When you have the jenkins_jobs.ini file, 
-1. Go to terminal (if you have Linux) and execute the following command:
+When you have the jenkins_jobs.ini file, go to the terminal (if you have Linux) and execute the following command:
 ``` 
     jenkins-jobs --conf /<path_to_jenkins_jobs.ini_file> update  /<path_to_job_templates.yaml>
 ``` 
@@ -133,7 +132,7 @@ INFO:jenkins_jobs.builder:Creating jenkins job <name of created job, for example
 INFO:jenkins_jobs.builder:Creating jenkins job <name of created job, for example, test-LINUX-firefox-the_third_case>
 ``` 
 
-2. Go to your Jenkins and check that jobs were created.
-3. Click the ‘Build now’ button(s) for every job that created in the previous step.
+Go to your Jenkins and check that jobs were created.
+Click the ‘Build now’ button(s) for every job that created in the previous step.
 
 That’s it!
