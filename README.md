@@ -88,9 +88,13 @@ class MyTestCase(BaseTestCase):
 if __name__ == '__main__':
     unittest.main()
 ``` 
+
    6. Open job_templates.yaml
+   
    7. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
+   
    8. Create there job from 'new_tests-{platform}-{browser}' template:
+   
 ```
 - 'new_tests-{platform}-{browser}-{title}':
    platform: LINUX
@@ -117,6 +121,7 @@ if __name__ == '__main__':
    test_dir: /path_to_directory_with_your_new_tests
    title: <for example, 'the_third_case'>
 ```   
+
 
 __Second__, the common part for the all cases is that you need to create these job(s) in Jenkins.
 Here you need to create (or use the existing one) jenkins_jobs.ini file.
