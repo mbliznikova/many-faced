@@ -53,15 +53,15 @@ So you can specify the addresses in the body of the job in ‘project’ section
 
 2. Write new tests and run it against your web application.
    
-   ⋅⋅1. Create .py file with ’test_’ prefix in one directory with ‘base_setup_teardown' file.
+   1. Create .py file with ’test_’ prefix in one directory with ‘base_setup_teardown' file.
    
-   ⋅⋅2. In this new file make import from base_setup_teardown import BaseTestCase.
+   2. In this new file make import from base_setup_teardown import BaseTestCase.
    
-   ⋅⋅3. Create your test class, for example class MyTestCase and inherit it from class BaseTestCase.
+   3. Create your test class, for example class MyTestCase and inherit it from class BaseTestCase.
    
-   ⋅⋅4. Write your test method and don\t care about setUp() and tearDown(), just use self.driver. 
+   4. Write your test method and don\t care about setUp() and tearDown(), just use self.driver. 
    
-   ⋅⋅5. In the end of file put 
+   5. In the end of file put 
    
 ``` 
         if __name__ == '__main__':
