@@ -16,6 +16,7 @@ The many-faced framework consists of:
 * __File configure_jenkins.yaml__ to update the framework (if something in git repository of framework will change).
 
 __Prerequisites__:
+
 Before you start you should have 
 1. Jenkins ([how get it and set it up](https://jenkins.io/download/))
 2. Jenkins job builder ([how get it and set it up](https://docs.openstack.org/infra/jenkins-job-builder/))
@@ -25,6 +26,7 @@ Before you start you should have
 
 
 __The common cases__:
+
 You have deployed web-application and want to run Selenium tests against it and 
 1. You have git repository with Selenium tests
 2. You want to write Selenium tests for your application and run these tests against application
