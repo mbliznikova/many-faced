@@ -36,8 +36,11 @@ You have deployed web-application and want to run Selenium tests against it and
 First, you need to create jobs in job_templates.yaml. Let's discover the examples for all cases.
 
 1. Run tests from git repository against your web application.
+   
    i. Open job_templates.yaml
+   
    ii. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
+   
    iii. Create there job from 'tests_from_repo-{platform}-{browser}-{title}’ template.
 You can specify the addresses of your app and grid in ‘defaults’ section (see above) for ‘app’ and ‘grid’ parameters respectively. It is useful when you want to create more that one job for the same application and the same grid. So you can define other defaults values in ‘defaults’ section depending on your needs. 
 So you can specify the addresses in the body of the job in ‘project’ section, ‘many-faced’ project, ‘jobs’ section:
