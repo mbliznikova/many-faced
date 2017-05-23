@@ -89,6 +89,8 @@ if __name__ == '__main__':
     unittest.main()
 ``` 
 
+Then
+
    6. Open job_templates.yaml
    
    7. Find ‘project’ section, ‘many-faced’ project, ‘jobs’ section.
