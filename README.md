@@ -34,7 +34,7 @@ You have deployed web-application and want to run Selenium tests against it and
 3. You have git repository with Selenium tests and you want to add some other tests and run all these tests against application 
 
 
-__First__, you need to create jobs in job_templates.yaml. Let's discover the examples for all cases.
+#### __First__, you need to create jobs in job_templates.yaml. Let's discover the examples for all cases.
 
 1. Run tests from git repository against your web application.
    
@@ -125,7 +125,7 @@ Then
 ```   
 
 
-__Second__, the common part for the all cases is that you need to create these job(s) in Jenkins.
+#### __Second__, the common part for the all cases is that you need to create these job(s) in Jenkins.
 Here you need to create (or use the existing one) jenkins_jobs.ini file.
 jenkins_jobs.ini should have at least following format:
 ``` 
